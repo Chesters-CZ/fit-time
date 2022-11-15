@@ -19,6 +19,7 @@ function switchModes() {
         document.getElementById("countdown").classList.add("hide");
         document.getElementById("timeDisplay").classList.remove("hide");
         document.getElementById("timeSelector").classList.remove("hide");
+        document.getElementById("countdownTimer").classList.remove("red");
     }
 
     isOdpocitava = !isOdpocitava;
@@ -48,7 +49,7 @@ function startTimer() {
             countdowntimer = window.setInterval(function () {
                 if (casKonceOdpoctu === 0) {
                     clearInterval(countdowntimer);
-                    document.getElementById("countdownTimer").classList.remove("red");
+                    document.getElementById("countdownTimer").classList.add("red");
                 } else if (casKonceOdpoctu % 2 === 1) {
                     document.getElementById("countdownTimer").classList.add("red");
                 } else {
