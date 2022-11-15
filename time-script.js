@@ -26,6 +26,7 @@ function switchModes() {
 
 function startTimer() {
     let ted = new Date();
+    document.getElementById("timeSelector").classList.add("hide");
 
     // datum plus time input v ms a timezone offset
     casKonceOdpoctu = new Date(ted.getTime()
