@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Zobrazování času</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="time-script.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="modeSwitch">
+        Odpočítávání
+    </div>
+
+    <div>
+        <div class="timer" id="timeDisplay">
+            <!-- sem přijde aktuální čas -->
+        </div>
+
+        <div class="hide" id="countdown">
+            <div class="timer" id="countdownTimer">
+                00:00:00
+            </div>
+
+            <div id="timeSelector">
+                <h2>Nastav dobu odpočtu</h2>
+                <div class="rowContainer">
+                    <div class="inputContainer">
+                        <input type="number" id="hourInput" value="0" onFocus="this.select()">
+                        <label for="hourInput">Hodin</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="number" id="minuteInput" value="0" onFocus="this.select()">
+                        <label for="minuteInput">Minut</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="number" id="secondInput" value="0" onFocus="this.select()">
+                        <label for="secondInput">Sekund</label>
+                    </div>
+                </div>
+                <button id="startTimer">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+</div>
+
+<script>
+    document.getElementById("modeSwitch").addEventListener("click", switchModes);
+    document.getElementById("startTimer").addEventListener("click", startTimer);
+</script>
+</body>
+</html>
