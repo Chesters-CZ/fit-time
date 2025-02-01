@@ -50,7 +50,7 @@ function startTimer() {
             ":" + cas.getMinutes().toString().padStart(2, "0") + ":" + cas.getSeconds().toString().padStart(2, "0");
 
         if (document.getElementById("countdownTimer").innerText === "00:00:00") {
-            notifyAudio = new Audio("/o95.wav");
+            notifyAudio = new Audio("https://chesters.cz/assets/fit-time/o95.wav");
             notifyAudio.play();
             document.getElementById("resetTimer").classList.remove("hide");
             document.getElementById("resetTimer").addEventListener("click", resetTimer);
